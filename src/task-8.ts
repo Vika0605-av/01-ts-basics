@@ -3,7 +3,7 @@ import axios from "axios";
 interface Post {
   id: number;
   name: string;
-  title: string;
+  body: string;
 }
 async function fetchPosts(): Promise<Post[]> {
   const response = await axios.get(
@@ -13,5 +13,5 @@ async function fetchPosts(): Promise<Post[]> {
 }
 
 fetchPosts().then((posts) => {
-  console.log(posts[0].title);
+  console.log(posts[0].body);
 });
